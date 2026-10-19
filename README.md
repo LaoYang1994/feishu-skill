@@ -8,12 +8,12 @@ This is a community-maintained skill. Each user connects their own app and accou
 
 ## Install from GitHub
 
-Replace `YOUR_GITHUB_USERNAME/feishu-skill` below with this repository's GitHub owner and name after publication.
+Install directly from `LaoYang1994/feishu-skill` using either method below.
 
 ### Ask your agent
 
 ```text
-Install the feishu skill from https://github.com/YOUR_GITHUB_USERNAME/feishu-skill
+Install the feishu skill from https://github.com/LaoYang1994/feishu-skill
 for this coding agent. Read skills/feishu/SKILL.md and its setup reference.
 Set up Feishu using my existing CLI configuration if available, then help me
 read this document: <my document URL>. Guide me through any browser steps.
@@ -27,10 +27,10 @@ Requires Node.js / npm and Git. Install for either agent:
 
 ```bash
 # Codex
-npx skills add YOUR_GITHUB_USERNAME/feishu-skill --skill feishu --agent codex --global
+npx skills add LaoYang1994/feishu-skill --skill feishu --agent codex --global
 
 # Claude Code
-npx skills add YOUR_GITHUB_USERNAME/feishu-skill --skill feishu --agent claude-code --global
+npx skills add LaoYang1994/feishu-skill --skill feishu --agent claude-code --global
 ```
 
 After installation, ask Codex to `Use $feishu to set up Feishu and read <URL>`, or run `/feishu` in Claude Code with the same request. If the skill does not appear, start a new agent session.
