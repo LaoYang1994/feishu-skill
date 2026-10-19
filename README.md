@@ -76,14 +76,14 @@ skills/feishu/
 ├── agents/openai.yaml            # Codex display metadata
 └── references/
     ├── setup.md                  # Installation, app setup, OAuth, verification
-    └── document-editing.md        # Versioned document-editing pitfalls
+    └── document-editing.md        # Document-editing guidance and observed pitfalls
 ```
 
 This ships as a standard skill, with no MCP server or agent-specific plugin runtime.
 
-## Compatibility and verification
+## Verification
 
-Command examples were checked against `lark-cli 1.0.97`. The editing pitfalls record observations from versions 1.0.96–1.0.97; inspect current help and verify results when using newer versions. Upstream documentation can change independently of this repository.
+Commands follow the installed CLI's current help and embedded guides. Verify writes by reading back the result; the [editing notes](skills/feishu/references/document-editing.md) provide historical observations for troubleshooting.
 
 Skill discovery and installation into isolated Codex and Claude Code project directories were verified with the Skills CLI. Skill-format validation, local links, and local CLI help were also checked. A fresh-account connection, a personal-only account, live Lark access, and the full browser authorization flow were not tested end to end for this release. Do not treat the compatibility table as a claim of those tests.
 

@@ -1,6 +1,6 @@
 # Document editing and known CLI pitfalls
 
-Read this before modifying document content. These observations came from `lark-cli` 1.0.96–1.0.97. They are not guarantees about later versions; current command help and a read-back take precedence.
+Read this before modifying document content. Follow the installed CLI's current help and guides, and verify writes by reading back the result. Version labels below document individual observations; check the current behavior before applying a workaround.
 
 Read the installed official guides first:
 
@@ -30,7 +30,7 @@ Avoid whole-document `overwrite` unless the user authorized a complete rewrite a
 | Inline `<whiteboard type="svg">` can lose SVG elements and leak labels into document text. | For a new board, insert `<whiteboard type="blank"></whiteboard>`, take its token from `new_blocks`, and update it through the whiteboard command. For an existing board, reuse its token. Check current whiteboard help/reference before writing. |
 | Some list-containing `block_replace` / `block_delete` ranges fail with `Invalid block range` (1.0.97). | Inspect the real list/container structure and current range restrictions. Prefer supported list-item/block operations; do not switch to `overwrite` merely to bypass this error. |
 
-The board-update pattern observed in those versions was:
+When the blank-board workaround is needed, the update pattern is:
 
 ```bash
 lark-cli whiteboard +update --as user --whiteboard-token <token> --input_format svg --source @./diagram.svg
