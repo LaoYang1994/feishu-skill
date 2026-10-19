@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+.lark-cli/
+.larksuite/
+.artifacts/
+*.log
+*.pem
+*.key
